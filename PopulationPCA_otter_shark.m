@@ -1,9 +1,12 @@
-% data
-time1 = [1, 2, 3, 4, 5];
-pop1 = [2.882, 2.881, 2.990, 3.194, 3.104]; 
+% get data from csv files
+sharks_data = readmatrix('sharks_processed.csv');
+otters_data = readmatrix('otters_processed.csv');
 
-time2 = [1, 2, 3, 4, 5]; 
-pop2 = [8.8, 7.7, 11.7, 8.7, 14.8]; 
+time1 = sharks_data(:,1);
+pop1 = sharks_data(:,2);
+
+time2 = otters_data(:,1);
+pop2 = otters_data(:,2);
 
 % common time grid
 common_time = linspace(min([time1, time2]), max([time1, time2]), 100);
