@@ -1,9 +1,12 @@
-% data
-time1 = [1, 2, 3, 4, 5];
-pop1 = [40, 145, 686, 1117, 1277]; 
+% get data from csv files
+urchins_data = readmatrix('urchins_processed.csv');
+otters_data = readmatrix('otters_processed.csv');
 
-time2 = [1, 2, 3, 4, 5]; 
-pop2 = [2882, 2881, 2990, 3194, 3104]; 
+time1 = urchins_data(:,1);
+pop1 = urchins_data(:,2);
+
+time2 = otters_data(:,1);
+pop2 = otters_data(:,2);
 
 % define common time grid
 common_time = linspace(min([time1, time2]), max([time1, time2]), 100);
